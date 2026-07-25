@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estate Cleanout Houston</title>
+<meta name="description" content="A vetted directory of estate sale, liquidation, appraisal, and cleanout companies serving Houston, Katy, Sugar Land, The Woodlands, Spring, Tomball, and Klein, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3WXGK15J4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L3WXGK15J4');
+</script>
+<style>
+  :root {
+    --ink: #211f1a;
+    --ink-soft: #4a473f;
+    --paper: #f6f2e8;
+    --paper-raised: #ffffff;
+    --green: #2f4538;
+    --green-deep: #202f26;
+    --brass: #b8893f;
+    --brass-soft: #e4c98a;
+    --wine: #6d3d4a;
+    --line: #ded6c2;
+    --radius: 4px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.5;
+  }
+  h1, h2, h3, .display { font-family: 'Fraunces', serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.02em; }
+  a { color: inherit; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brass-soft); font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  nav { display: flex; gap: 24px; font-size: 0.92rem; }
+  nav a { text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color .15s, color .15s; }
+  nav a:hover { color: var(--ink); border-color: var(--brass); }
+  @media (max-width: 640px) { nav { display: none; } }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
+    color: #f2ede0;
+    padding: 72px 24px 110px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 85% 20%, rgba(184,137,63,0.14), transparent 45%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1140px; margin: 0 auto; position: relative;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 32px; align-items: center;
+  }
+  .hero-art { width: 100%; height: auto; justify-self: end; }
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-art { display: none; }
+  }
+  .eyebrow {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--brass-soft); margin-bottom: 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--brass-soft); display: inline-block; }
+  .hero h1 {
+    font-size: clamp(2rem, 4.6vw, 3.4rem);
+    font-weight: 600; line-height: 1.08; margin: 0 0 20px; max-width: 15ch;
+  }
+  .hero p.lede {
+    font-size: 1.08rem; max-width: 46ch; color: #d9d2c0; margin: 0 0 8px;
+  }
+  .hero p.lede.small { font-size: 0.92rem; color: #b9b19b; max-width: 50ch; margin-bottom: 0;}
+
+  /* SEARCH CARD */
+  .search-card {
+    background: var(--paper-raised);
+    border-radius: 6px;
+    box-shadow: 0 24px 48px -20px rgba(0,0,0,0.35);
+    padding: 22px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    max-width: 720px;
+  }
+  .search-card input[type="text"] {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 13px 16px;
+    font-size: 0.98rem;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: inherit;
+  }
+  .search-card input[type="text"]:focus { outline: 2px solid var(--brass); outline-offset: 1px; }
+  .search-card button {
+    background: var(--green);
+    color: #f2ede0;
+    border: none;
+    border-radius: var(--radius);
+    padding: 13px 26px;
+    font-weight: 600;
+    font-size: 0.94rem;
+    transition: background .15s;
+  }
+  .search-card button:hover { background: var(--green-deep); }
+  @media (max-width: 560px) { .search-card { grid-template-columns: 1fr; } }
+
+  /* MAIN */
+  main { max-width: 1140px; margin: -58px auto 0; padding: 0 24px 80px; position: relative; }
+
+  .tabs {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 40px;
+    padding: 6px;
+    width: fit-content;
+    margin: 0 0 28px;
+    box-shadow: 0 6px 20px -14px rgba(0,0,0,0.2);
+  }
+  .tab {
+    border: none; background: transparent;
+    padding: 9px 18px; border-radius: 40px;
+    font-size: 0.86rem; color: var(--ink-soft); font-weight: 500;
+    transition: background .15s, color .15s;
+    white-space: nowrap;
+  }
+  .tab.active { background: var(--green); color: #f2ede0; }
+  .tab:not(.active):hover { background: var(--paper); }
+
+  .results-row {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 18px; font-size: 0.86rem; color: var(--ink-soft);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 22px 20px;
+    position: relative;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -18px rgba(0,0,0,0.28); }
+
+  .featured-tag {
+    position: absolute; top: -1px; right: 18px;
+    background: var(--brass);
+    color: #2a1d08;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 5px 10px 6px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .card-cat {
+    display: inline-flex; align-items: center; gap: 5px; align-self: flex-start;
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 4px 10px 4px 8px; border-radius: 20px;
+    font-weight: 600;
+  }
+  .card-cat svg { width: 12px; height: 12px; flex-shrink: 0; }
+  .cat-sale { background: #e7e1cf; color: var(--green-deep); }
+  .cat-clean { background: #ece0e2; color: var(--wine); }
+  .cat-appraisal { background: #e9dcc3; color: #6b4a17; }
+
+  .card h3 { font-size: 1.12rem; margin: 0; font-weight: 600; line-height: 1.25; }
+  .card .desc { font-size: 0.9rem; color: var(--ink-soft); margin: 0; flex-grow: 1; }
+
+  .card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--line); padding-top: 12px; margin-top: 4px;
+    font-size: 0.84rem;
+  }
+  .card-footer .phone { font-family: 'IBM Plex Mono', monospace; color: var(--ink-soft); }
+  .card-footer .phone.unlisted { color: #9a9484; font-style: italic; font-family: 'Public Sans', sans-serif; }
+  .card-footer a.visit {
+    text-decoration: none; font-weight: 600; color: var(--green-deep);
+    border-bottom: 1px solid var(--brass);
+  }
+
+  .empty-state {
+    text-align: center; padding: 60px 20px; color: var(--ink-soft);
+    border: 1px dashed var(--line); border-radius: 6px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    margin-top: 64px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  @media (max-width: 700px) { .cta-section { grid-template-columns: 1fr; } }
+  .cta-box {
+    border-radius: 6px; padding: 30px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .cta-box.plain { background: var(--paper-raised); border: 1px solid var(--line); }
+  .cta-box.gold { background: linear-gradient(160deg, #3a2d17, #22190d); color: #f2ede0; }
+  .cta-box h3 { margin: 0; font-size: 1.3rem; }
+  .cta-box p { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .cta-box.gold p { color: #d9cbaa; }
+  .cta-box button.cta-btn {
+    align-self: flex-start; margin-top: 6px;
+    border: none; border-radius: var(--radius); padding: 11px 20px;
+    font-weight: 600; font-size: 0.9rem;
+  }
+  .cta-box.plain button.cta-btn { background: var(--green); color: #f2ede0; }
+  .cta-box.gold button.cta-btn { background: var(--brass); color: #2a1d08; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 28px 24px; text-align: center;
+    font-size: 0.8rem; color: var(--ink-soft);
+  }
+
+  /* MODAL */
+  .modal-backdrop {
+    display: none; position: fixed; inset: 0; background: rgba(20,17,10,0.55);
+    align-items: center; justify-content: center; z-index: 100; padding: 20px;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: var(--paper-raised); border-radius: 6px; padding: 28px;
+    max-width: 420px; width: 100%; position: relative;
+  }
+  .modal h3 { margin: 0 0 6px; }
+  .modal p.hint { font-size: 0.85rem; color: var(--ink-soft); margin: 0 0 18px; }
+  .modal label { display: block; font-size: 0.82rem; font-weight: 600; margin: 14px 0 5px; }
+  .modal input, .modal select {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius);
+    font-family: inherit; font-size: 0.9rem; background: var(--paper);
+  }
+  .modal .close-x {
+    position: absolute; top: 16px; right: 16px; background: none; border: none;
+    font-size: 1.1rem; color: var(--ink-soft);
+  }
+  .modal .submit-btn {
+    margin-top: 20px; width: 100%; background: var(--green); color: #f2ede0;
+    border: none; border-radius: var(--radius); padding: 12px; font-weight: 600;
+  }
+  .modal .confirm { display: none; background: #eef3ec; border: 1px solid #c9dbc4; color: #2f4538;
+    padding: 12px 14px; border-radius: var(--radius); font-size: 0.85rem; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand"><span class="brand-mark">H</span> Estate Cleanout Houston</div>
+    <nav>
+      <a href="#listings">Listings</a>
+      <a href="#" onclick="openModal('submit'); return false;">Submit a Listing</a>
+      <a href="#" onclick="openModal('feature'); return false;">Get Featured</a>
+      <a href="#" onclick="openModal('owner'); return false;">Owner Login</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow mono">Greater Houston &amp; Harris County</div>
+      <h1>When it's time to clear the house, not the memories.</h1>
+      <p class="lede">A short list of vetted estate sale, liquidation, and cleanout companies serving Houston — from River Oaks to Cypress to Clear Lake.</p>
+      <p class="lede small">Built for families settling an estate, executors on a probate deadline, and anyone downsizing a parent's home before the next Gulf Coast humidity spike makes the job worse.</p>
+      <div class="search-card">
+        <input type="text" id="searchInput" placeholder="Search by name or keyword (e.g. &quot;River Oaks&quot;, &quot;same-day&quot;)" oninput="renderCards()">
+        <button onclick="document.getElementById('searchInput').focus()">Search</button>
+      </div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- sky glow -->
+      <circle cx="330" cy="80" r="120" fill="#b8893f" opacity="0.10"/>
+      <!-- live oak canopy -->
+      <path d="M40 150 Q10 120 45 95 Q40 60 85 55 Q110 25 150 45 Q190 20 215 55 Q255 45 260 85 Q295 90 280 130 Q300 160 260 175 Q250 200 210 190 Q190 210 150 195 Q110 210 90 185 Q50 195 40 165 Z"
+            fill="none" stroke="#e4c98a" stroke-width="2" opacity="0.85"/>
+      <path d="M60 150 Q90 135 120 148 M120 148 Q150 130 185 145 M185 145 Q220 132 250 150 M100 170 Q140 160 175 172 M175 172 Q215 158 245 172"
+            fill="none" stroke="#e4c98a" stroke-width="1.4" opacity="0.55"/>
+      <!-- trunk -->
+      <path d="M155 195 Q150 230 145 258 M145 258 Q120 275 100 285 M145 258 Q165 278 190 282"
+            fill="none" stroke="#e4c98a" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+      <!-- bungalow porch -->
+      <g stroke="#e4c98a" stroke-width="2" fill="none" opacity="0.9">
+        <path d="M200 300 L200 250 L260 210 L320 250 L320 300 Z"/>
+        <line x1="200" y1="300" x2="320" y2="300"/>
+        <line x1="215" y1="300" x2="215" y2="255"/>
+        <line x1="305" y1="300" x2="305" y2="255"/>
+        <line x1="215" y1="255" x2="305" y2="255"/>
+        <line x1="222" y1="255" x2="222" y2="300"/>
+        <line x1="240" y1="255" x2="240" y2="300"/>
+        <line x1="258" y1="255" x2="258" y2="300"/>
+        <line x1="276" y1="255" x2="276" y2="300"/>
+        <line x1="294" y1="255" x2="294" y2="300"/>
+        <rect x="248" y="270" width="20" height="30"/>
+        <path d="M190 258 L260 205 L330 258" stroke-width="2.5"/>
+      </g>
+      <!-- ground line -->
+      <line x1="20" y1="300" x2="400" y2="300" stroke="#e4c98a" stroke-width="1" opacity="0.35"/>
+      <!-- estate tag, nodding to the directory's "tagged item" theme -->
+      <g transform="translate(325,175) rotate(12)">
+        <path d="M0 0 L34 0 L44 14 L34 28 L0 28 Z" fill="none" stroke="#b8893f" stroke-width="1.6"/>
+        <circle cx="9" cy="14" r="2.6" fill="#b8893f"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<main id="listings">
+  <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:14px;">
+    <div class="tabs" id="tabs"></div>
+    <select id="areaSelect" onchange="renderCards()" style="border:1px solid var(--line); border-radius:40px; padding:9px 16px; font-size:0.86rem; background:var(--paper-raised); color:var(--ink-soft); font-family:inherit;">
+      <option value="">All neighborhoods</option>
+    </select>
+  </div>
+  <div class="results-row">
+    <span id="resultsCount" class="mono"></span>
+    <span>Sorted: featured first</span>
+  </div>
+  <div class="grid" id="grid">
+    <p class="mono" style="grid-column:1/-1; color:var(--ink-soft);">Loading listings…</p>
+  </div>
+
+  <div class="cta-section">
+    <div class="cta-box plain">
+      <h3>Run an estate service in Houston?</h3>
+      <p>Add your business to the directory for free. Families search here before they search Google.</p>
+      <button class="cta-btn" onclick="openModal('submit')">Submit Free Listing</button>
+    </div>
+    <div class="cta-box gold">
+      <h3>Get Featured — $30/mo</h3>
+      <p>Featured listings appear first in every category and search result, with a gold marker families notice.</p>
+      <button class="cta-btn" onclick="openModal('feature')">Get Featured</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Houston Estate Cleanout Directory — demo build. Listings compiled from public business websites; verify phone numbers, licensing, and insurance directly with each company before hiring.
+</footer>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <button class="close-x" onclick="closeModal()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — owner: fill these in to go live.
+   1. Create a Stripe Payment Link in your Stripe Dashboard
+      (Payment Links > New) for the $30/mo "Featured" price,
+      then paste the URL below. No backend or secret key needed.
+   2. Set your own owner password for the admin panel.
+   ============================================================ */
+const STRIPE_PAYMENT_LINK_URL = "https://buy.stripe.com/test_00waEX4Vb6gccNFcdb6EU00"; // TEST MODE — swap for a live link before accepting real payments
+const OWNER_PASSWORD = "EstateHTX-2026!"; // change this before sharing the link
+
+const SEED_LISTINGS = [
+  { id: "l1", name: "Blue Family Estate Sales", cat: "sale", areas: ["Houston","Cypress","Sugar Land","Katy","Pasadena"], desc: "Individualized, face-to-face approach to liquidating a loved one's estate, from consultation through sale day.", phone: null, url: "https://bluefamilyestatesales.com/", featured: true },
+  { id: "l2", name: "Gallery One Estate Sale Services", cat: "sale", areas: ["Houston","Katy","Spring","Sugar Land","The Woodlands"], desc: "Combines in-home sales with an online auction platform to reach buyers beyond the open house.", phone: null, url: "https://galleryoneestatesales.com/", featured: true },
+  { id: "l3", name: "My Estate to Liquidate", cat: "sale", areas: ["Houston"], desc: "Full-service estate and commercial liquidation, with guidance on what to sell versus keep.", phone: null, url: "https://myestatetoliquidate.com/houston-estate-sale.html", featured: false },
+  { id: "l4", name: "liquESTATE", cat: "sale", areas: ["Houston","Sugar Land","The Woodlands","Katy","Cypress","Bellaire","The Heights"], desc: "One-stop estate auction and sale house, also offering consignment and live auctioneer services.", phone: null, url: "https://liquestate.com/", featured: false },
+  { id: "l5", name: "Two Moms Estate Sales", cat: "sale", areas: ["Houston"], desc: "Full-service staging, pricing, and advertising, with optional post-sale removal of anything unsold.", phone: null, url: "https://www.twomomsestatesales.com/", featured: false },
+  { id: "l6", name: "Memory Lane Estate Sales & Services", cat: "sale", areas: ["Katy","Kingwood","Spring","The Woodlands","Tomball","Humble"], desc: "Family-owned estate sale service covering the northwest Houston suburbs, from Katy to Kingwood.", phone: null, url: "https://www.estatesale.com/companies/view/1763/Memory-Lane-Estate-Sales-Services-LLC.html", featured: false },
+  { id: "l7", name: "Alexander Appraisal & Estate Services", cat: "appraisal", areas: ["Houston"], desc: "Certified appraisals of art, jewelry, and antiques alongside full estate liquidation handling.", phone: null, url: "https://www.alexanderappraisal.com/", featured: true },
+  { id: "l8", name: "The Junkluggers of Houston Metro", cat: "clean", areas: ["Houston","Alief","Bellaire"], desc: "Sorts, donates, and recycles as it clears a property, starting with a free in-home consultation.", phone: null, url: "https://www.junkluggers.com/houston-metro/estate-cleanouts/", featured: true },
+  { id: "l9", name: "Clearout Junk", cat: "clean", areas: ["Houston","River Oaks","Galleria"], desc: "Works Galleria and River Oaks estates alongside probate attorneys, with documented donation receipts for the court.", phone: "(936) 251-5256", url: "https://clearoutjunk.com/estate-cleanup-galleria", featured: false },
+  { id: "l10", name: "Handymen Junk Removal", cat: "clean", areas: ["Houston","Cypress","Katy"], desc: "Covers Houston, Cypress, and Katy with same-day sorting, loading, and hauling.", phone: "(832) 986-0940", url: "https://www.handymenjunk.com/estate-cleanouts", featured: false },
+  { id: "l11", name: "LoadUp Houston", cat: "clean", areas: ["Houston"], desc: "Online booking for estate cleanout crews, priced by the scale of the job before anyone shows up.", phone: null, url: "https://goloadup.com/houston/estate-cleanout/", featured: false },
+  { id: "l12", name: "Houston Junk Movers", cat: "clean", areas: ["Houston"], desc: "Positions items for sale day, then hauls away anything left over once the sale ends.", phone: null, url: "https://www.houstonjunkmovers.com/locations/houston/service/estate-cleanout-services/", featured: false },
+  { id: "l13", name: "Speedy Junk Removal & Recycling", cat: "clean", areas: ["Houston","Splendora"], desc: "Licensed and insured crews available 24/7 for urgent estate, eviction, and foreclosure cleanouts.", phone: "(832) 960-2590", url: "https://speedyrecyclejunkremoval.net/commercial/real-estate-cleanouts/", featured: false },
+  { id: "l14", name: "Muvr", cat: "clean", areas: ["Houston","Downtown Houston","North Houston","South Houston"], desc: "Instant online quotes and same-day booking, from single-item pickup to full truckloads.", phone: null, url: "https://www.muvr.io/junk-removal/houston-tx/estate-cleanout/", featured: false },
+  { id: "l15", name: "Wildflower Lane Estate Sales", cat: "sale", areas: ["Sugar Land","Katy","Southwest Houston"], desc: "Handles staging, pricing, hosting, and clean-out in one pass for families, executors, and real estate agents.", phone: "(281) 640-6505", url: "https://www.facebook.com/WildFlowerLaneEstateSales/", featured: false },
+  { id: "l16", name: "Get It Sold Estate Sales", cat: "sale", areas: ["Tomball","Cypress","Spring","Montgomery"], desc: "Markets sales through local papers, social media, and email lists, then routes leftovers to a Tomball nonprofit for a tax-deductible pickup.", phone: null, url: "https://www.getitsoldestatesales.com/", featured: false },
+  { id: "l17", name: "All About Estate Sales", cat: "sale", areas: ["Spring","Tomball","Klein","Cypress","Conroe","Cy-Fair"], desc: "Runs whole-house in-home sales and buyouts across the north Houston suburbs, plus post-sale cleanout if anything's left.", phone: null, url: "https://allaboutestatesales.com/", featured: false },
+  { id: "l18", name: "Margie Beegle Sales", cat: "sale", areas: ["Katy"], desc: "Long-running Katy-area estate sale company handling pricing, staging, and sale-day logistics.", phone: "(713) 524-0715", url: "https://margiebeeglesales.com/", featured: false },
+];
+
+const categories = [
+  { key: "all", label: "All" },
+  { key: "sale", label: "Estate Sale & Liquidation" },
+  { key: "clean", label: "Cleanout & Junk Removal" },
+  { key: "appraisal", label: "Appraisal & Auction" },
+];
+const catLabel = { sale: "Estate Sale & Liquidation", clean: "Cleanout & Junk Removal", appraisal: "Appraisal & Auction" };
+const catClass = { sale: "cat-sale", clean: "cat-clean", appraisal: "cat-appraisal" };
+const catIcon = {
+  sale: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.24L3.24 9.59A2 2 0 0 0 3.83 11l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83Z"/><circle cx="8.5" cy="8.5" r="1.25" fill="currentColor" stroke="none"/></svg>',
+  clean: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 12 3l9 5-9 5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
+  appraisal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 13-7.5 7.5a1 1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m8 8 6-6 6 6-6 6Z"/></svg>',
+};
+
+const STORAGE_KEY = "directory-listings-v2";
+let listings = [];
+let activeTab = "all";
+let ownerMode = false;
+
+async function loadListings() {
+  try {
+    const result = await window.storage.get(STORAGE_KEY, true);
+    listings = result ? JSON.parse(result.value) : SEED_LISTINGS;
+  } catch (e) {
+    listings = SEED_LISTINGS;
+  }
+  populateAreaFilter();
+  renderTabs();
+  renderCards();
+}
+
+async function saveListings() {
+  try {
+    await window.storage.set(STORAGE_KEY, JSON.stringify(listings), true);
+  } catch (e) {
+    console.error("Storage error:", e);
+  }
+}
+
+function populateAreaFilter() {
+  const areas = new Set();
+  listings.forEach(l => (l.areas || []).forEach(a => areas.add(a)));
+  const sel = document.getElementById("areaSelect");
+  const current = sel.value;
+  sel.innerHTML = `<option value="">All neighborhoods</option>` +
+    [...areas].sort().map(a => `<option value="${a}">${a}</option>`).join("");
+  sel.value = current;
+}
+
+function renderTabs() {
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = categories.map(c =>
+    `<button class="tab ${c.key === activeTab ? "active" : ""}" onclick="setTab('${c.key}')">${c.key === "all" ? "" : `<span style="display:inline-flex; width:12px; height:12px; vertical-align:-2px; margin-right:5px;">${catIcon[c.key]}</span>`}${c.label}</button>`
+  ).join("");
+}
+
+function setTab(key) {
+  activeTab = key;
+  renderTabs();
+  renderCards();
+}
+
+function renderCards() {
+  const query = document.getElementById("searchInput").value.trim().toLowerCase();
+  const area = document.getElementById("areaSelect").value;
+  let filtered = listings.filter(l => {
+    const matchesTab = activeTab === "all" || l.cat === activeTab;
+    const matchesArea = !area || (l.areas || []).includes(area);
+    const matchesQuery = !query || l.name.toLowerCase().includes(query) || l.desc.toLowerCase().includes(query);
+    return matchesTab && matchesArea && matchesQuery;
+  });
+  filtered.sort((a, b) => (b.featured === true) - (a.featured === true));
+
+  document.getElementById("resultsCount").textContent = `${filtered.length} result${filtered.length === 1 ? "" : "s"}`;
+
+  const grid = document.getElementById("grid");
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state" style="grid-column: 1/-1;">No listings match that search. Try a different keyword, category, or neighborhood.</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(l => `
+    <div class="card">
+      ${l.featured ? '<div class="featured-tag">Featured</div>' : ''}
+      <span class="card-cat ${catClass[l.cat]}">${catIcon[l.cat]}${catLabel[l.cat]}</span>
+      <h3>${l.name}</h3>
+      <p class="desc">${l.desc}</p>
+      ${ownerMode ? `<div style="display:flex; gap:8px; font-size:0.78rem;">
+          <button onclick="toggleFeatured('${l.id}')" style="border:1px solid var(--line); background:var(--paper); border-radius:3px; padding:4px 8px;">${l.featured ? "Unfeature" : "Make Featured"}</button>
+          <button onclick="deleteListing('${l.id}')" style="border:1px solid var(--line); background:var(--paper); border-radius:3px; padding:4px 8px; color:var(--wine);">Delete</button>
+        </div>` : ''}
+      <div class="card-footer">
+        <span class="phone ${l.phone ? '' : 'unlisted'}">${l.phone ? l.phone : 'See website for phone'}</span>
+        <a class="visit" href="${l.url}" target="_blank" rel="noopener">Visit site →</a>
+      </div>
+    </div>
+  `).join("");
+}
+
+function openModal(type) {
+  const content = document.getElementById("modalContent");
+  if (type === "submit") {
+    content.innerHTML = `
+      <h3>Submit a free listing</h3>
+      <p class="hint">This adds a live listing to the directory for every visitor — no approval step in this demo.</p>
+      <label>Business name</label><input type="text" id="subName" placeholder="e.g. Bayou City Estate Sales">
+      <label>Category</label>
+      <select id="subCat"><option value="sale">Estate Sale & Liquidation</option><option value="clean">Cleanout & Junk Removal</option><option value="appraisal">Appraisal & Auction</option></select>
+      <label>Neighborhood(s) served</label><input type="text" id="subAreas" placeholder="e.g. Katy, Cypress">
+      <label>One-line description</label><input type="text" id="subDesc" placeholder="What makes this business worth calling?">
+      <label>Phone (optional)</label><input type="text" id="subPhone" placeholder="(281) 555-0100">
+      <label>Website</label><input type="text" id="subUrl" placeholder="https://">
+      <button class="submit-btn" onclick="submitListing()">Submit Listing</button>
+      <div class="confirm" id="confirmMsg">Listing added — it's now live in the directory.</div>
+    `;
+  } else if (type === "feature") {
+    content.innerHTML = `
+      <h3>Get Featured — $30/mo</h3>
+      <p class="hint">Featured listings appear first in every category and search result, with a gold marker.</p>
+      <label>Business name (must match your existing listing)</label><input type="text" id="featName" placeholder="e.g. Bayou City Estate Sales">
+      <button class="submit-btn" onclick="goToStripe()">Continue to Payment</button>
+      <div class="confirm" id="confirmMsg">${STRIPE_PAYMENT_LINK_URL ? "Redirecting to Stripe checkout…" : "No Stripe Payment Link is configured yet. The site owner needs to create one in their Stripe Dashboard (Payment Links → New) and paste the URL into STRIPE_PAYMENT_LINK_URL near the top of the script."}</div>
+    `;
+  } else if (type === "owner") {
+    content.innerHTML = ownerMode ? `
+      <h3>Owner panel</h3>
+      <p class="hint">You're logged in. Featured toggles and delete buttons now appear on each card below.</p>
+      <button class="submit-btn" onclick="ownerMode=false; closeModal(); renderCards();">Log Out</button>
+    ` : `
+      <h3>Owner login</h3>
+      <p class="hint">After a business pays via Stripe, log in here and mark their listing Featured. (Demo password is set in the script's OWNER_PASSWORD constant — replace it before sharing this link.)</p>
+      <label>Password</label><input type="password" id="ownerPw">
+      <button class="submit-btn" onclick="ownerLogin()">Log In</button>
+      <div class="confirm" id="confirmMsg">Incorrect password.</div>
+    `;
+  }
+  document.getElementById("modalBackdrop").classList.add("open");
+}
+
+async function submitListing() {
+  const name = document.getElementById("subName").value.trim();
+  const desc = document.getElementById("subDesc").value.trim();
+  const url = document.getElementById("subUrl").value.trim();
+  if (!name || !desc || !url) {
+    document.getElementById("confirmMsg").textContent = "Please fill in at least name, description, and website.";
+    document.getElementById("confirmMsg").style.display = "block";
+    return;
+  }
+  const areas = document.getElementById("subAreas").value.split(",").map(a => a.trim()).filter(Boolean);
+  const newListing = {
+    id: "l" + Date.now(),
+    name,
+    cat: document.getElementById("subCat").value,
+    areas: areas.length ? areas : ["Houston"],
+    desc,
+    phone: document.getElementById("subPhone").value.trim() || null,
+    url: url.startsWith("http") ? url : "https://" + url,
+    featured: false,
+  };
+  listings.push(newListing);
+  await saveListings();
+  populateAreaFilter();
+  renderCards();
+  document.getElementById("confirmMsg").style.display = "block";
+}
+
+function goToStripe() {
+  const msg = document.getElementById("confirmMsg");
+  msg.style.display = "block";
+  if (STRIPE_PAYMENT_LINK_URL) {
+    window.open(STRIPE_PAYMENT_LINK_URL, "_blank", "noopener");
+  }
+}
+
+function ownerLogin() {
+  const pw = document.getElementById("ownerPw").value;
+  if (pw === OWNER_PASSWORD) {
+    ownerMode = true;
+    closeModal();
+    renderCards();
+  } else {
+    document.getElementById("confirmMsg").style.display = "block";
+  }
+}
+
+async function toggleFeatured(id) {
+  const l = listings.find(x => x.id === id);
+  if (l) { l.featured = !l.featured; await saveListings(); renderCards(); }
+}
+
+async function deleteListing(id) {
+  listings = listings.filter(x => x.id !== id);
+  await saveListings();
+  populateAreaFilter();
+  renderCards();
+}
+
+function closeModal() {
+  document.getElementById("modalBackdrop").classList.remove("open");
+}
+
+document.getElementById("modalBackdrop").addEventListener("click", (e) => {
+  if (e.target.id === "modalBackdrop") closeModal();
+});
+
+loadListings();
+</script>
+
+</body>
+</html>
